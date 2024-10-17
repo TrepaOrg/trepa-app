@@ -8,7 +8,7 @@ type AppProps = {
 export const App: FC<AppProps> = (props) => {
     const { onClick } = props;
     return (
-        <div>
+        <div className={styles.container}>
             <h1 className={styles.title}>title</h1>
             <button className={styles.button} onClick={onClick}>
                 Show Alert
