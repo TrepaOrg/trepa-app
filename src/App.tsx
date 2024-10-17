@@ -8,8 +8,11 @@ type AppProps = {
 export const App: FC<AppProps> = (props) => {
     const { onClick } = props;
     return (
-        <h1 className={styles.title}>
-            <button onClick={onClick}>Show Alert</button>
-        </h1>
+        <div>
+            <h1 className={styles.title}>title</h1>
+            <button className={styles.button} onClick={onClick}>
+                Show Alert
+            </button>
+        </div>
     );
 };

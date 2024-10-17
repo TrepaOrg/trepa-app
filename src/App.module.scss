@@ -2,3 +2,17 @@
     font-size: 24px;
     background-color: blanchedalmond;
 }
+
+.button {
+    border: 1px solid red;
+    background: none;
+    padding: 10px;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+
+    &:hover {
+        background-color: green;
+    }
+}
