@@ -1,0 +1,5 @@
+@use 'variables' as variables;
+
+@function toRem($size) {
+    @return ($size / variables.$rootFontSize) * 1rem;
+}

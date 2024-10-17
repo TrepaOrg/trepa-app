@@ -1,0 +1,101 @@
+// Disable this rule because it don't support Sass module system (I mean `@use`)
+// stylelint-disable primer/no-unused-vars
+
+/* Colors
+ ========================================================================== */
+$colorBlackDark: #4b5472;
+$colorMutedDefault: lightgray;
+
+
+/* Base
+ ========================================================================== */
+$rootFontSize: 16px;
+$baseBoxShadowColor: transparentize(black, 0.95);
+$baseBoxShadow: 0 8px 25px $baseBoxShadowColor;
+$dropDownListShadow: 0 8px 24px -10px rgba(135, 160, 185, 0.3);
+$basePageLayoutBackgroundColor: white;
+$baseScrollbarWidth: 6px;
+$baseBorderRadius: 10px;
+
+/* Fonts
+ ========================================================================== */
+$fontFamilyBase: 'Nunito Sans', sans-serif;
+$fontFamilyCurrency: Noah, 'PT Root UI', sans-serif;
+
+/* Fonts weights
+ ========================================================================== */
+$fontWeightLight: 300;
+$fontWeightRegular: 400;
+$fontWeightSemiBold: 600;
+$fontWeightBold: 700;
+$fontWeightExtraBold: 800;
+
+/* Container
+ ========================================================================== */
+$containerMaxWidth: 1248px !default;
+$containerSmallMaxWidth: 900px !default;
+$containerPaddingHorizontal: 16px !default;
+$containerPaddingHorizontalS: 24px !default;
+$containerPaddingHorizontalM: 32px !default;
+
+/* Button base
+ ========================================================================== */
+$buttonBaseFontSizeS: 16px !default;
+$buttonBaseBorderRadius: 120px !default;
+$buttonBaseHeight: 40px !default;
+$buttonSmallHeight: 32px !default;
+$buttonMediumHeight: 40px !default;
+$buttonSemiLargeHeight: 48px !default;
+$buttonLargeHeight: 56px !default;
+$buttonBaseHoverDarkenCoefficient: 10 !default;
+$buttonBasePaddingHorizontalS: 16px !default;
+$buttonBasePaddingHorizontal: 8px !default;
+$buttonBaseDisabledBackgroundColor: $colorMutedDefault !default;
+$buttonBaseIconMargin: 9px;
+
+/* Breakpoints
+ ========================================================================== */
+$breakpointXxsmall: 375px !default;
+$breakpointXsmall: 425px !default;
+$breakpointSmall: 640px !default;
+$breakpointSemiMedium: 770px !default;
+$breakpointMedium: 900px !default;
+$breakpointSemiLarge: 1100px !default;
+$breakpointLarge: 1200px !default;
+$breakpointXlarge: 1440px !default;
+$breakpointXxlarge: 1920px !default;
+
+/* Transitions
+ ========================================================================== */
+$transitionDefaultDuration: 0.2s !default;
+$transitionDefaultTimingFunction: ease-out !default;
+$transitionDefault: $transitionDefaultDuration $transitionDefaultTimingFunction !default;
+
+/* Layers
+ ========================================================================== */
+$zIndexBase: 100;
+$zIndexHeartProductCard: $zIndexBase;
+$zIndexLoaderCart: $zIndexHeartProductCard + 1;
+$zIndexAutocompleteList: $zIndexLoaderCart;
+$zIndexDrawerOverlay: $zIndexAutocompleteList;
+$zIndexDrawer: $zIndexDrawerOverlay;
+$zIndexHeader: $zIndexAutocompleteList + 1;
+$zIndexModalOverlay: $zIndexHeader;
+$zIndexHeaderPopover: $zIndexHeader + 1;
+$zIndexModal: $zIndexModalOverlay + 1;
+$zIndexModalContent: $zIndexModal + 1;
+$zIndexHighPopover: $zIndexModalContent + 1;
+$zIndexHeaderMenuPopover: $zIndexHighPopover + 1;
+$zIndexNotification: $zIndexModalContent + 1;
+$zIndexReCaptcha: $zIndexModalContent + 1;
+$zIndexNprogress: 1000;
+
+/* Sizes
+ ========================================================================== */
+$headerTopHeight: 40px;
+$headerBottomHeight: 80px;
+$headerHeight: $headerTopHeight + $headerBottomHeight;
+
+$headerTopHeightM: 37px;
+$headerBottomHeightM: 106px;
+$headerHeightM: $headerTopHeightM + $headerBottomHeightM;
