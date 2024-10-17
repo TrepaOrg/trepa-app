@@ -1,10 +1,20 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
     background-color: var(--tg-theme-bg-color);
 }
 
 .title {
     font-size: 24px;
-    background-color: blanchedalmond;
+    margin-bottom: 20px;
+}
+
+.demoItem {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .button {
