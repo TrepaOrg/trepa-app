@@ -46,8 +46,6 @@ export default [
         },
         rules: {
             'linebreak-style': 'off',
-            'import/prefer-default-export': 'off',
-            'import/no-default-export': 'error',
             'no-console': 'off',
             'prettier/prettier': [
                 'error',

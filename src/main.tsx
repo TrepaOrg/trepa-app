@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 
 import WebApp from '@twa-dev/sdk';
-import { App } from './App';
+import App from './App';
 
 WebApp.ready();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App onClick={() => WebApp.showAlert(`Hello World!}`)} />
+        <App />
     </React.StrictMode>,
 );

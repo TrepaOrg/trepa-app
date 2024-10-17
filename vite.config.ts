@@ -7,7 +7,6 @@ import basicSsl from '@vitejs/plugin-basic-ssl';
 config({ allowEmptyValues: true });
 
 // https://vitejs.dev/config/
-// eslint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
     const apiProxyUrl = process.env.VITE_API_PROXY_URL;
 

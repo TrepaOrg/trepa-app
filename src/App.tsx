@@ -1,19 +1,26 @@
-import styles from './App.module.scss';
-import { FC } from 'react';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Используем BrowserRouter
+import DefaultLayout from '@layouts/DefaultLayout';
+import Home from '@views/Home';
 
-type AppProps = {
-    onClick?: () => void;
-};
+const NotFound = lazy(() => import('@views/NotFound'));
 
-export const App: FC<AppProps> = (props) => {
-    const { onClick } = props;
+function App() {
     return (
-        <div className={styles.container}>
-            <h1 className={styles.title}>Telegram Theme Variables</h1>
+        <Router>
+            <Suspense fallback={<div>todo add Loading...</div>}>
+                <Routes>
+                    {/* Default layout with nested routes */}
+                    <Route path="/" element={<DefaultLayout />}>
+                        <Route index element={<Home />} />
+                    </Route>
 
-            <button className={styles.button} onClick={onClick}>
-                Show Alert
-            </button>
-        </div>
+                    {/* 404 Page */}
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </Suspense>
+        </Router>
     );
-};
+}
+
+export default App;
