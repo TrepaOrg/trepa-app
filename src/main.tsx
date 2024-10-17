@@ -9,6 +9,6 @@ WebApp.ready();
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <App />
+        <App onClick={() => WebApp.showAlert(`Hello World!}`)} />
     </React.StrictMode>,
 );
