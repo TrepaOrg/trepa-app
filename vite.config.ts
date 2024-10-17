@@ -3,17 +3,18 @@ import { config } from 'dotenv-safe';
 import path from 'path';
 import { defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
-
+import basicSsl from '@vitejs/plugin-basic-ssl';
 config({ allowEmptyValues: true });
 
 // https://vitejs.dev/config/
+// eslint-disable-next-line import/no-default-export
 export default defineConfig(({ mode }) => {
     const apiProxyUrl = process.env.VITE_API_PROXY_URL;
 
     return {
-        base: '/',
+        base: './',
         build: {
-            outDir: 'build',
+            outDir: './build',
         },
         css: {
             modules: {
@@ -48,6 +49,7 @@ export default defineConfig(({ mode }) => {
         },
         plugins: [
             react(),
+            basicSsl(),
             svgrPlugin({
                 svgrOptions: {
                     ref: true,
