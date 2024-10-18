@@ -1,3 +1,3 @@
 export const Home = () => {
-    return <h1>User data: {window.Telegram.WebApp.initData}</h1>;
+    return <h1>window.Telegram.WebApp: {JSON.stringify(window.Telegram.WebApp)}</h1>;
 };
