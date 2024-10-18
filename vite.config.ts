@@ -4,6 +4,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 import svgrPlugin from 'vite-plugin-svgr';
 import basicSsl from '@vitejs/plugin-basic-ssl';
+
 config({ allowEmptyValues: true });
 
 // https://vitejs.dev/config/
@@ -11,7 +12,7 @@ export default defineConfig(({ mode }) => {
     const apiProxyUrl = process.env.VITE_API_PROXY_URL;
 
     return {
-        base: './',
+        base: '/trepa-app/',
         build: {
             outDir: './build',
         },

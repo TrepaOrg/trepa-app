@@ -1,6 +1,7 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Используем BrowserRouter
+import React, { lazy, Suspense } from 'react';
 import DefaultLayout from '@layouts/DefaultLayout';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+
 import Home from '@views/Home';
 
 const NotFound = lazy(() => import('@views/NotFound'));
@@ -13,10 +14,8 @@ function App() {
                     {/* Default layout with nested routes */}
                     <Route path="/" element={<DefaultLayout />}>
                         <Route index element={<Home />} />
+                        <Route path="*" element={<NotFound />} />
                     </Route>
-
-                    {/* 404 Page */}
-                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </Suspense>
         </Router>
