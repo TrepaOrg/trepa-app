@@ -13,7 +13,7 @@ importers:
         version: 7.10.1(react@18.3.1)
       '@vitejs/plugin-basic-ssl':
         specifier: ^1.1.0
-        version: 1.1.0(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 1.1.0(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -26,7 +26,7 @@ importers:
     devDependencies:
       '@reduxjs/toolkit':
         specifier: ^2.3.0
-        version: 2.3.0(react-redux@9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+        version: 2.3.0(react-redux@9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.3.3)
@@ -50,7 +50,7 @@ importers:
         version: 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       '@vitejs/plugin-react':
         specifier: ^4.3.2
-        version: 4.3.2(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 4.3.2(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -113,7 +113,7 @@ importers:
         version: 0.11.10
       react-redux:
         specifier: ^9.1.2
-        version: 9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1)
+        version: 9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1)
       sass:
         specifier: ^1.79.5
         version: 1.79.5
@@ -137,13 +137,13 @@ importers:
         version: 5.6.3
       vite:
         specifier: ^5.4.9
-        version: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+        version: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
       vite-plugin-pwa:
         specifier: ^0.20.5
-        version: 0.20.5(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))(workbox-build@7.1.1(@domains/babel__core@7.20.5))(workbox-window@7.1.0)
+        version: 0.20.5(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
       vite-plugin-svgr:
         specifier: ^4.2.0
-        version: 4.2.0(rollup@2.79.2)(typescript@5.6.3)(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 4.2.0(rollup@2.79.2)(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
 
 packages:
 
@@ -4384,7 +4384,7 @@ snapshots:
       reselect: 5.1.1
     optionalDependencies:
       react: 18.3.1
-      react-redux: 9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1)
+      react-redux: 9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1)
 
   '@remix-run/router@1.20.0': {}
 
@@ -4719,7 +4719,7 @@ snapshots:
 
   '@vitejs/plugin-basic-ssl@1.1.0(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))':
     dependencies:
-      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
 
   '@vitejs/plugin-react@4.3.2(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))':
     dependencies:
@@ -4728,7 +4728,7 @@ snapshots:
       '@babel/plugin-transform-react-jsx-source': 7.25.7(@babel/core@7.25.8)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -6815,8 +6815,8 @@ snapshots:
       debug: 4.3.7
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.9
-      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
-      workbox-build: 7.1.1(@domains/babel__core@7.20.5)
+      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      workbox-build: 7.1.1(@types/babel__core@7.20.5)
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
@@ -6826,7 +6826,7 @@ snapshots:
       '@rollup/pluginutils': 5.1.2(rollup@2.79.2)
       '@svgr/core': 8.1.0(typescript@5.6.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.6.3))
-      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -6915,7 +6915,7 @@ snapshots:
       '@babel/core': 7.25.8
       '@babel/preset-env': 7.25.8(@babel/core@7.25.8)
       '@babel/runtime': 7.25.7
-      '@rollup/plugin-babel': 5.3.1(@babel/core@7.25.8)(@domains/babel__core@7.20.5)(rollup@2.79.2)
+      '@rollup/plugin-babel': 5.3.1(@babel/core@7.25.8)(@types/babel__core@7.20.5)(rollup@2.79.2)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@2.79.2)
       '@rollup/plugin-replace': 2.4.2(rollup@2.79.2)
       '@rollup/plugin-terser': 0.4.4(rollup@2.79.2)
@@ -6949,7 +6949,7 @@ snapshots:
       workbox-sw: 7.1.0
       workbox-window: 7.1.0
     transitivePeerDependencies:
-      - '@domains/babel__core'
+      - '@types/babel__core'
       - supports-color
 
   workbox-cacheable-response@7.1.0:
