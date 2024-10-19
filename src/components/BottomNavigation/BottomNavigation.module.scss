@@ -1,6 +1,7 @@
 @use '@styles/variables' as vars;
 
 .root {
+    z-index: vars.$z-index-bottom-navigation;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -9,6 +10,9 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 -4px 14px 0 vars.$color-grey-008;
+    border-top: 1px solid rgb(2 3 8 / 12%);
+    background: rgb(255 255 255 / 40%);
+    backdrop-filter: blur(64px);
 }
 
 .tab {

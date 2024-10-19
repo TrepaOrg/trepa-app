@@ -13,7 +13,7 @@ importers:
         version: 7.10.1(react@18.3.1)
       '@vitejs/plugin-basic-ssl':
         specifier: ^1.1.0
-        version: 1.1.0(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 1.1.0(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -24,6 +24,9 @@ importers:
         specifier: ^6.27.0
         version: 6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@reduxjs/toolkit':
+        specifier: ^2.3.0
+        version: 2.3.0(react-redux@9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^4.3.0
         version: 4.3.0(prettier@3.3.3)
@@ -47,7 +50,7 @@ importers:
         version: 8.9.0(eslint@9.12.0)(typescript@5.6.3)
       '@vitejs/plugin-react':
         specifier: ^4.3.2
-        version: 4.3.2(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 4.3.2(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -108,6 +111,9 @@ importers:
       process:
         specifier: ^0.11.10
         version: 0.11.10
+      react-redux:
+        specifier: ^9.1.2
+        version: 9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1)
       sass:
         specifier: ^1.79.5
         version: 1.79.5
@@ -131,13 +137,13 @@ importers:
         version: 5.6.3
       vite:
         specifier: ^5.4.9
-        version: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+        version: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
       vite-plugin-pwa:
         specifier: ^0.20.5
-        version: 0.20.5(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0)
+        version: 0.20.5(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))(workbox-build@7.1.1(@domains/babel__core@7.20.5))(workbox-window@7.1.0)
       vite-plugin-svgr:
         specifier: ^4.2.0
-        version: 4.2.0(rollup@2.79.2)(typescript@5.6.3)(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
+        version: 4.2.0(rollup@2.79.2)(typescript@5.6.3)(vite@5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))
 
 packages:
 
@@ -1009,6 +1015,17 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
+  '@reduxjs/toolkit@2.3.0':
+    resolution: {integrity: sha512-WC7Yd6cNGfHx8zf+iu+Q1UPTfEcXhQ+ATi7CV1hlrSAaQBdlPzg7Ww/wJHNQem7qG9rxmWoFCDCPubSvFObGzA==}
+    peerDependencies:
+      react: ^16.9.0 || ^17.0.0 || ^18
+      react-redux: ^7.2.1 || ^8.1.3 || ^9.0.0
+    peerDependenciesMeta:
+      react:
+        optional: true
+      react-redux:
+        optional: true
+
   '@remix-run/router@1.20.0':
     resolution: {integrity: sha512-mUnk8rPJBI9loFDZ+YzPGdeniYK+FTmRD1TMCz7ev2SNIozyKKpnGgsxO34u6Z4z/t0ITuu7voi/AshfsGsgFg==}
     engines: {node: '>=14.0.0'}
@@ -1277,6 +1294,9 @@ packages:
 
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
+  '@types/use-sync-external-store@0.0.3':
+    resolution: {integrity: sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==}
 
   '@typescript-eslint/eslint-plugin@8.9.0':
     resolution: {integrity: sha512-Y1n621OCy4m7/vTXNlCbMVp87zSd7NH0L9cXD8aIpOaNlzeWxIK4+Q19A68gSmTNRZn92UjocVUWDthGxtqHFg==}
@@ -2173,6 +2193,9 @@ packages:
     resolution: {integrity: sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==}
     engines: {node: '>= 4'}
 
+  immer@10.1.1:
+    resolution: {integrity: sha512-s2MPrmjovJcoMaHtx6K11Ra7oD05NT97w1IC5zpMkT6Atjr7H8LjaDd81iIxUYpMKSRRNMJE703M1Fhr/TctHw==}
+
   immutable@4.3.7:
     resolution: {integrity: sha512-1hqclzwYwjRDFLjcFxOM5AYkkG0rpFPpr1RLPMEuGczoS7YA8gLhy8SWXYRAA/XwfEHpfo3cw5JGioS32fnMRw==}
 
@@ -2763,6 +2786,18 @@ packages:
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
+  react-redux@9.1.2:
+    resolution: {integrity: sha512-0OA4dhM1W48l3uzmv6B7TXPCGmokUU4p1M44DGN2/D9a1FjVPukVjER1PcPX97jIg6aUeLq1XJo1IpfbgULn0w==}
+    peerDependencies:
+      '@types/react': ^18.2.25
+      react: ^18.0
+      redux: ^5.0.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      redux:
+        optional: true
+
   react-refresh@0.14.2:
     resolution: {integrity: sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==}
     engines: {node: '>=0.10.0'}
@@ -2787,6 +2822,14 @@ packages:
   readdirp@4.0.2:
     resolution: {integrity: sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA==}
     engines: {node: '>= 14.16.0'}
+
+  redux-thunk@3.1.0:
+    resolution: {integrity: sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==}
+    peerDependencies:
+      redux: ^5.0.0
+
+  redux@5.0.1:
+    resolution: {integrity: sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==}
 
   reflect.getprototypeof@1.0.6:
     resolution: {integrity: sha512-fmfw4XgoDke3kdI6h4xcUz1dG8uaiv5q9gcEwLS4Pnth2kxT+GZ7YehS1JTMGBQmtV7Y4GFGbs2re2NqhdozUg==}
@@ -2823,6 +2866,9 @@ packages:
   require-from-string@2.0.2:
     resolution: {integrity: sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==}
     engines: {node: '>=0.10.0'}
+
+  reselect@5.1.1:
+    resolution: {integrity: sha512-K/BG6eIky/SBpzfHZv/dd+9JBFiS4SWV7FIujVyJRux6e45+73RaUHXLmIR1f7WOMaQ0U1km6qwklRQxpJJY0w==}
 
   resolve-from@4.0.0:
     resolution: {integrity: sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==}
@@ -3215,6 +3261,11 @@ packages:
 
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
+
+  use-sync-external-store@1.2.2:
+    resolution: {integrity: sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
 
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
@@ -4325,6 +4376,16 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
+  '@reduxjs/toolkit@2.3.0(react-redux@9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)':
+    dependencies:
+      immer: 10.1.1
+      redux: 5.0.1
+      redux-thunk: 3.1.0(redux@5.0.1)
+      reselect: 5.1.1
+    optionalDependencies:
+      react: 18.3.1
+      react-redux: 9.1.2(@domains/react@18.3.11)(react@18.3.1)(redux@5.0.1)
+
   '@remix-run/router@1.20.0': {}
 
   '@rollup/plugin-babel@5.3.1(@babel/core@7.25.8)(@types/babel__core@7.20.5)(rollup@2.79.2)':
@@ -4573,6 +4634,8 @@ snapshots:
 
   '@types/trusted-types@2.0.7': {}
 
+  '@types/use-sync-external-store@0.0.3': {}
+
   '@typescript-eslint/eslint-plugin@8.9.0(@typescript-eslint/parser@8.9.0(eslint@9.12.0)(typescript@5.6.3))(eslint@9.12.0)(typescript@5.6.3)':
     dependencies:
       '@eslint-community/regexpp': 4.11.1
@@ -4656,7 +4719,7 @@ snapshots:
 
   '@vitejs/plugin-basic-ssl@1.1.0(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))':
     dependencies:
-      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
 
   '@vitejs/plugin-react@4.3.2(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))':
     dependencies:
@@ -4665,7 +4728,7 @@ snapshots:
       '@babel/plugin-transform-react-jsx-source': 7.25.7(@babel/core@7.25.8)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -5641,6 +5704,8 @@ snapshots:
 
   ignore@6.0.2: {}
 
+  immer@10.1.1: {}
+
   immutable@4.3.7: {}
 
   import-fresh@3.3.0:
@@ -6172,6 +6237,15 @@ snapshots:
 
   react-is@16.13.1: {}
 
+  react-redux@9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1):
+    dependencies:
+      '@types/use-sync-external-store': 0.0.3
+      react: 18.3.1
+      use-sync-external-store: 1.2.2(react@18.3.1)
+    optionalDependencies:
+      '@types/react': 18.3.11
+      redux: 5.0.1
+
   react-refresh@0.14.2: {}
 
   react-router-dom@6.27.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
@@ -6191,6 +6265,12 @@ snapshots:
       loose-envify: 1.4.0
 
   readdirp@4.0.2: {}
+
+  redux-thunk@3.1.0(redux@5.0.1):
+    dependencies:
+      redux: 5.0.1
+
+  redux@5.0.1: {}
 
   reflect.getprototypeof@1.0.6:
     dependencies:
@@ -6237,6 +6317,8 @@ snapshots:
       jsesc: 3.0.2
 
   require-from-string@2.0.2: {}
+
+  reselect@5.1.1: {}
 
   resolve-from@4.0.0: {}
 
@@ -6722,6 +6804,10 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
+  use-sync-external-store@1.2.2(react@18.3.1):
+    dependencies:
+      react: 18.3.1
+
   util-deprecate@1.0.2: {}
 
   vite-plugin-pwa@0.20.5(vite@5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0))(workbox-build@7.1.1(@types/babel__core@7.20.5))(workbox-window@7.1.0):
@@ -6729,8 +6815,8 @@ snapshots:
       debug: 4.3.7
       pretty-bytes: 6.1.1
       tinyglobby: 0.2.9
-      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
-      workbox-build: 7.1.1(@types/babel__core@7.20.5)
+      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      workbox-build: 7.1.1(@domains/babel__core@7.20.5)
       workbox-window: 7.1.0
     transitivePeerDependencies:
       - supports-color
@@ -6740,7 +6826,7 @@ snapshots:
       '@rollup/pluginutils': 5.1.2(rollup@2.79.2)
       '@svgr/core': 8.1.0(typescript@5.6.3)
       '@svgr/plugin-jsx': 8.1.0(@svgr/core@8.1.0(typescript@5.6.3))
-      vite: 5.4.9(@types/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
+      vite: 5.4.9(@domains/node@22.7.5)(sass@1.79.5)(sugarss@4.0.1(postcss@8.4.47))(terser@5.36.0)
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -6829,7 +6915,7 @@ snapshots:
       '@babel/core': 7.25.8
       '@babel/preset-env': 7.25.8(@babel/core@7.25.8)
       '@babel/runtime': 7.25.7
-      '@rollup/plugin-babel': 5.3.1(@babel/core@7.25.8)(@types/babel__core@7.20.5)(rollup@2.79.2)
+      '@rollup/plugin-babel': 5.3.1(@babel/core@7.25.8)(@domains/babel__core@7.20.5)(rollup@2.79.2)
       '@rollup/plugin-node-resolve': 15.3.0(rollup@2.79.2)
       '@rollup/plugin-replace': 2.4.2(rollup@2.79.2)
       '@rollup/plugin-terser': 0.4.4(rollup@2.79.2)
@@ -6863,7 +6949,7 @@ snapshots:
       workbox-sw: 7.1.0
       workbox-window: 7.1.0
     transitivePeerDependencies:
-      - '@types/babel__core'
+      - '@domains/babel__core'
       - supports-color
 
   workbox-cacheable-response@7.1.0:

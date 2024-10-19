@@ -3,6 +3,8 @@ $color-grey-1: rgb(223 223 224 / 100%);
 $color-grey-06: rgb(25 27 31 / 60%);
 $color-grey-008: rgb(25 27 31 / 8%);
 $color-grey-004: rgb(25 27 31 / 4%);
+$color-main-accent: rgb(255 113 161);
+$color-white: rgb(255 255 255);
 
 /* Base */
 $root-font-size: 16px;
@@ -14,7 +16,7 @@ $base-scrollbar-width: 6px;
 $base-border-radius: 12px;
 
 /* Fonts */
-$font-family-base: 'Montseratt', sans-serif;
+$font-family-base: 'Montserrat', sans-serif;
 
 /* Fonts weights */
 $font-weight-light: 300;
@@ -35,27 +37,13 @@ $breakpoint-xlarge: 1440px;
 $breakpoint-xxlarge: 1920px;
 
 /* Transitions */
-$transition-default-duration: 0.2s;
+$transition-default-duration: 0.3s;
 $transition-default-timing-function: ease-out;
 $transition-default: $transition-default-duration $transition-default-timing-function;
 
 /* Layers */
 $z-index-base: 100;
-$z-index-heart-product-card: $z-index-base;
-$z-index-loader-cart: $z-index-heart-product-card + 1;
-$z-index-autocomplete-list: $z-index-loader-cart;
-$z-index-drawer-overlay: $z-index-autocomplete-list;
-$z-index-drawer: $z-index-drawer-overlay;
-$z-index-header: $z-index-autocomplete-list + 1;
-$z-index-modal-overlay: $z-index-header;
-$z-index-header-popover: $z-index-header + 1;
-$z-index-modal: $z-index-modal-overlay + 1;
-$z-index-modal-content: $z-index-modal + 1;
-$z-index-high-popover: $z-index-modal-content + 1;
-$z-index-header-menu-popover: $z-index-high-popover + 1;
-$z-index-notification: $z-index-modal-content + 1;
-$z-index-recaptcha: $z-index-modal-content + 1;
-$z-index-nprogress: 1000;
+$z-index-bottom-navigation: $z-index-base + 1;
 
 /* Sizes */
 $header-top-height: 40px;

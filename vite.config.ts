@@ -47,14 +47,6 @@ export default defineConfig(({ mode }) => {
                 '@assets': path.resolve(__dirname, './src/assets'),
             },
         },
-        plugins: [
-            react(),
-            basicSsl(),
-            svgrPlugin({
-                svgrOptions: {
-                    ref: true,
-                },
-            }),
-        ],
+        plugins: [react(), basicSsl(), svgrPlugin()],
     };
 });
