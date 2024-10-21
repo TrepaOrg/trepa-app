@@ -4,6 +4,7 @@ import { Poll } from '@domains/poll';
 import Icon from '@components/Icon';
 import { formatNumberWithDelimiter } from '@utils/number';
 import { formatMilliseconds } from '@utils/time';
+import { Link } from '@components/telegram/Link';
 
 type PollCardProps = Poll & {
     onClick?: () => void;
@@ -12,7 +13,7 @@ type PollCardProps = Poll & {
 export const PollCard: FC<PollCardProps> = (props) => {
     const { id, title, usersCount, amount, timeLeft, imgUrl, onClick } = props;
     return (
-        <div className={styles.root}>
+        <Link to="/poll" className={styles.root}>
             <img className={styles.image} src={imgUrl} alt={`Poll ${id}`} />
             <div className={styles.main}>
                 <span className={styles.title}>{title}</span>
@@ -35,6 +36,6 @@ export const PollCard: FC<PollCardProps> = (props) => {
                     PICK MAJORITY
                 </button>
             </div>
-        </div>
+        </Link>
     );
 };

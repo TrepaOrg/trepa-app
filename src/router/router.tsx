@@ -3,6 +3,7 @@ import Home from '@views/Home';
 import { createHashRouter } from 'react-router-dom';
 import DefaultLayout from '@layouts/DefaultLayout';
 import NotFound from '@views/NotFound';
+import Poll from '@views/Poll';
 
 interface Route {
     path: string;
@@ -14,6 +15,7 @@ interface Route {
 export const routes: Route[] = [
     { path: '/', Component: Home },
     { path: '/search', Component: () => <h1>search</h1> },
+    { path: '/poll', Component: Poll },
 ];
 
 export const router = createHashRouter([
