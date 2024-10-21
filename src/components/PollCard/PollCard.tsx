@@ -4,7 +4,7 @@ import { Poll } from '@domains/poll';
 import Icon from '@components/Icon';
 import { formatNumberWithDelimiter } from '@utils/number';
 import { formatMilliseconds } from '@utils/time';
-import { Link } from '@components/telegram/Link';
+import { useNavigate } from 'react-router-dom';
 
 type PollCardProps = Poll & {
     onClick?: () => void;
@@ -12,8 +12,16 @@ type PollCardProps = Poll & {
 
 export const PollCard: FC<PollCardProps> = (props) => {
     const { id, title, usersCount, amount, timeLeft, imgUrl, onClick } = props;
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        onClick?.();
+        navigate('/poll');
+    };
+
     return (
-        <Link to="/poll" className={styles.root}>
+        <div className={styles.root}>
             <img className={styles.image} src={imgUrl} alt={`Poll ${id}`} />
             <div className={styles.main}>
                 <span className={styles.title}>{title}</span>
@@ -32,10 +40,10 @@ export const PollCard: FC<PollCardProps> = (props) => {
                         <span>{formatMilliseconds(timeLeft)}</span>
                     </div>
                 </div>
-                <button onClick={onClick} className={styles.pickButton}>
+                <button onClick={handleClick} className={styles.pickButton}>
                     PICK MAJORITY
                 </button>
             </div>
-        </Link>
+        </div>
     );
 };
