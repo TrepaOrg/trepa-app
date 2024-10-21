@@ -12,10 +12,11 @@ export default defineConfig(({ mode }) => {
     const apiProxyUrl = process.env.VITE_API_PROXY_URL;
 
     return {
-        base: '/trepa-app/',
+        base: '/trepa-app',
         build: {
             outDir: './build',
         },
+        publicDir: './public',
         css: {
             modules: {
                 // Change `__` underscores to `--` dashes
@@ -27,6 +28,7 @@ export default defineConfig(({ mode }) => {
         server: {
             port: Number(process.env.VITE_PORT),
             strictPort: true,
+            host: true,
             proxy: {
                 '/api': apiProxyUrl,
             },
@@ -47,6 +49,6 @@ export default defineConfig(({ mode }) => {
                 '@assets': path.resolve(__dirname, './src/assets'),
             },
         },
-        plugins: [react(), basicSsl(), svgrPlugin()],
+        plugins: [react(), svgrPlugin(), basicSsl()],
     };
 });

@@ -1,7 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styles from './BottomNavigation.module.scss';
-import { clsx } from 'clsx';
+import { Link } from '@components/Link/Link';
+import { useLocation } from 'react-router-dom';
+import clsx from 'clsx';
 
 type Tab = {
     name: string;
@@ -18,18 +19,18 @@ const tabs = [
 ];
 
 export const BottomNavigation = () => {
+    const location = useLocation();
     return (
         <nav className={styles.root}>
-            {tabs.map((tab) => (
-                <NavLink
-                    key={tab.path}
-                    to={tab.path}
-                    className={({ isActive }) => clsx(styles.tab, { [styles.isActive]: isActive })}
-                >
-                    <span className={styles.icon}>{tab.icon}</span>
-                    <span className={styles.label}>{tab.name}</span>
-                </NavLink>
-            ))}
+            {tabs.map((tab) => {
+                const isActive = location.pathname === tab.path;
+                return (
+                    <Link key={tab.path} to={tab.path} className={clsx(styles.tab, isActive && styles.isActive)}>
+                        <span className={styles.icon}>{tab.icon}</span>
+                        <span className={styles.label}>{tab.name}</span>
+                    </Link>
+                );
+            })}
         </nav>
     );
 };
