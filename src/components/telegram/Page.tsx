@@ -5,8 +5,10 @@ import { PropsWithChildren, useEffect } from 'react';
 export function Page({
     children,
     canGoBack = true,
+    className,
 }: PropsWithChildren<{
     canGoBack?: boolean;
+    className?: string;
 }>) {
     const navigate = useNavigate();
 
@@ -20,5 +22,5 @@ export function Page({
         backButton.hide();
     }, [canGoBack]);
 
-    return <>{children}</>;
+    return <div className={className}>{children}</div>;
 }
