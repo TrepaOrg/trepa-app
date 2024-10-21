@@ -14,6 +14,9 @@ export function App() {
         WebApp.setHeaderColor('#ededed');
     }
 
+    WebApp.enableClosingConfirmation();
+    WebApp.enableClosingConfirmation();
+
     return (
         <AppRoot
             appearance={isDark ? 'dark' : 'light'}
