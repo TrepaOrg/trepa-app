@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './BottomNavigation.module.scss';
-import { Link } from '@components/Link/Link';
+import { Link } from '@components/telegram/Link';
 import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
 

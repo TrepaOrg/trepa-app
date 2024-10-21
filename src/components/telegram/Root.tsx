@@ -1,5 +1,5 @@
-import { ErrorBoundary } from '@components/ErrorBoundary';
-import { App } from '@components/App';
+import { ErrorBoundary } from '@components/telegram/ErrorBoundary';
+import { App } from '@components/telegram/App';
 
 function ErrorBoundaryError({ error }: { error: unknown }) {
     return (
