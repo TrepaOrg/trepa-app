@@ -79,8 +79,7 @@
             "prettier --write --ignore-unknown"
         ],
         "src/**/*.{css,scss,sass}": [
-            "prettier --write --ignore-unknown",
-            "stylelint --fix"
+            "prettier --write --ignore-unknown"
         ]
     }
 }
