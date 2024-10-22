@@ -5,13 +5,15 @@ import Icon from '@components/Icon';
 import { formatNumberWithDelimiter } from '@utils/number';
 import { formatMilliseconds } from '@utils/time';
 import { useNavigate } from 'react-router-dom';
+import clsx from 'clsx';
 
 type PollCardProps = Poll & {
+    className?: string;
     onClick?: () => void;
 };
 
 export const PollCard: FC<PollCardProps> = (props) => {
-    const { id, title, usersCount, amount, timeLeft, imgUrl, onClick } = props;
+    const { id, title, usersCount, amount, timeLeft, imgUrl, className, onClick } = props;
 
     const navigate = useNavigate();
 
@@ -21,7 +23,7 @@ export const PollCard: FC<PollCardProps> = (props) => {
     };
 
     return (
-        <div className={styles.root}>
+        <div className={clsx(styles.root, className)}>
             <img className={styles.image} src={imgUrl} alt={`Poll ${id}`} />
             <div className={styles.main}>
                 <span className={styles.title}>{title}</span>

@@ -4,6 +4,7 @@
     z-index: vars.$z-index-bottom-navigation;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: 76px;
     display: flex;
@@ -11,34 +12,49 @@
     align-items: center;
     box-shadow: 0 -4px 14px 0 vars.$color-grey-008;
     border-top: 1px solid rgb(2 3 8 / 12%);
-    background: rgb(255 255 255 / 40%);
+    background: vars.$color-grey-04;
     backdrop-filter: blur(64px);
+    padding: 16px 10px;
 }
 
 .tab {
     width: 62px;
-    height: 52px;
+    height: 56px;
     border-radius: vars.$base-border-radius;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px 16px;
-    gap: 4px;
+    gap: 8px;
+    position: relative;
 
     &.isActive {
-        background-color: vars.$color-grey-008;
-    }
+        .icon {
+            opacity: 1;
+        }
 
-    &:hover {
-        background-color: vars.$color-grey-004;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            width: 48px;
+            height: 4px;
+            background-color: vars.$color-main-accent;
+            border-radius: 2px;
+        }
     }
 }
 
 .icon {
+    width: 16px;
+    height: 16px;
     font-size: 10px;
+    opacity: 0.6;
 }
 
 .label {
     font-size: 12px;
-    margin-top: 5px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
 }

@@ -1,0 +1,64 @@
+@use '@styles/variables' as vars;
+
+.root {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 24px;
+    margin-bottom: 16px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.params {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+%container {
+    background-color: vars.$color-grey-004;
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-weight: 500;
+    text-align: center;
+    height: 24px;
+    color: #020308;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.shareContainer {
+    @extend %container;
+
+    min-width: 40%;
+    padding: 4px 8px;
+}
+
+.pointsContainer {
+    @extend %container;
+
+    min-width: 40%;
+    padding: 4px 8px;
+}
+
+.searchIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}

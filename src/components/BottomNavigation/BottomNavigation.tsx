@@ -3,19 +3,21 @@ import styles from './BottomNavigation.module.scss';
 import { Link } from '@components/telegram/Link';
 import { useLocation } from 'react-router-dom';
 import clsx from 'clsx';
+import { IconKind } from '@components/Icon/Icon';
+import Icon from '@components/Icon';
 
 type Tab = {
     name: string;
     path: string;
-    icon: React.ComponentType;
+    icon: IconKind;
 };
 
-const tabs = [
-    { name: 'Home', path: '/', icon: '🏠' },
-    { name: 'Search', path: '/search', icon: '🔍' },
-    { name: 'Favorites', path: '/favorites', icon: '❤️' },
-    { name: 'Notifications', path: '/notifications', icon: '🔔' },
-    { name: 'Profile', path: '/profile', icon: '👤' },
+const tabs: Tab[] = [
+    { name: 'Home', path: '/', icon: 'home' },
+    { name: 'Polls', path: '/polls', icon: 'polls' },
+    { name: 'Portfolio', path: '/portfolio', icon: 'portfolio' },
+    { name: 'Pulse', path: '/pulse', icon: 'pulse' },
+    { name: 'Profile', path: '/profile', icon: 'profile' },
 ];
 
 export const BottomNavigation = () => {
@@ -26,7 +28,7 @@ export const BottomNavigation = () => {
                 const isActive = location.pathname === tab.path;
                 return (
                     <Link key={tab.path} to={tab.path} className={clsx(styles.tab, isActive && styles.isActive)}>
-                        <span className={styles.icon}>{tab.icon}</span>
+                        <Icon name={tab.icon} className={styles.icon} />
                         <span className={styles.label}>{tab.name}</span>
                     </Link>
                 );

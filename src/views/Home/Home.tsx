@@ -7,7 +7,7 @@ export const Home = () => {
     return (
         <Page canGoBack={false} className={styles.root}>
             {mockPolls.map((mockPoll) => (
-                <PollCard {...mockPoll} key={mockPoll.id} />
+                <PollCard {...mockPoll} key={mockPoll.id} className={styles.pollCard} />
             ))}
         </Page>
     );
