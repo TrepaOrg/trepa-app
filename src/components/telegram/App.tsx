@@ -15,7 +15,7 @@ export function App() {
     }
 
     WebApp.enableClosingConfirmation();
-    WebApp.enableClosingConfirmation();
+    WebApp.expand();
 
     return (
         <AppRoot
