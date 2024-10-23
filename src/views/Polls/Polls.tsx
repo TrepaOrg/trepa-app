@@ -10,7 +10,7 @@ export const Polls = () => {
     }, []);
 
     async function getPolls() {
-        const { data } = await supabase.from('Poll').select();
+        const { data } = await supabase.from('Poll').select('*');
 
         if (data) {
             setPolls(data);
@@ -22,12 +22,18 @@ export const Polls = () => {
             {polls.length === 0 && <span>no poll</span>}
             {polls.map((poll) => (
                 <div key={poll.id}>
-                    <span>{poll.id}</span>
-                    <span>{poll.created_at}</span>
-                    <span>{poll.expired_at}</span>
-                    <span>{poll.option_1}</span>
-                    <span>{poll.option_2}</span>
-                    <span>{poll.title}</span>
+                    <span>Id: {poll.id}</span>
+                    <br />
+                    <span>Created At: {poll.created_at}</span>
+                    <br />
+                    <span>Expired At: {poll.expired_at}</span>
+                    <br />
+                    <span>Option 1: {poll.option_1}</span>
+                    <br />
+                    <span>Option 2: {poll.option_2}</span>
+                    <br />
+                    <span>Title: {poll.title}</span>
+                    <br />
                 </div>
             ))}
         </div>
