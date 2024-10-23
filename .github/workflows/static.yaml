@@ -38,10 +38,6 @@ jobs:
                 echo "VITE_APP_TOKEN=${{ secrets.VITE_APP_TOKEN }}" >> .env
                 echo "VITE_SUPABASE_PROJECT_URL=${{ secrets.VITE_SUPABASE_PROJECT_URL }}" >> .env
                 echo "VITE_SUPABASE_API_KEY=${{ secrets.VITE_SUPABASE_API_KEY }}" >> .env
-                echo "VITE_APP_PORT=${{ secrets.VITE_APP_PORT }}"
-                echo "VITE_APP_TOKEN=${{ secrets.VITE_APP_TOKEN }}"
-                echo "VITE_SUPABASE_PROJECT_URL=${{ secrets.VITE_SUPABASE_PROJECT_URL }}"
-                echo "VITE_SUPABASE_API_KEY=${{ secrets.VITE_SUPABASE_API_KEY }}"
 
             - name: Check .env content
               run: cat .env
