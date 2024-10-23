@@ -8,7 +8,6 @@ export function App() {
     const lp = useLaunchParams();
     const isDark = useSignal(miniApp.isDark);
     useAppTheme(isDark);
-
     return (
         <AppRoot
             appearance={isDark ? 'dark' : 'light'}
