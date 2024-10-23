@@ -5,6 +5,7 @@ import DefaultLayout from '@layouts/DefaultLayout';
 import NotFound from '@views/NotFound';
 import Poll from '@views/Poll';
 import Profile from '@components/Profile';
+import Polls from '@views/Polls';
 
 interface Route {
     path: string;
@@ -17,6 +18,7 @@ export const routes: Route[] = [
     { path: '/', Component: Home },
     { path: '/search', Component: () => <h1>search</h1> },
     { path: '/poll', Component: Poll },
+    { path: '/polls', Component: Polls },
     { path: '/profile', Component: Profile },
 ];
 
