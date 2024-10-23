@@ -9,8 +9,8 @@ export const Profile = () => {
 
     return (
         <div>
-            <span>{WebApp.initDataUnsafe.user?.photo_url}</span>
-            <span>{photoUrl}</span>
+            <span>photo: {WebApp.initDataUnsafe.user?.photo_url}</span>
+            <span>photo: {photoUrl}</span>
             <img src={photoUrl} alt="profile image" />
             <span>id: {id}</span>
             <span>first_name: {firstName}</span>
