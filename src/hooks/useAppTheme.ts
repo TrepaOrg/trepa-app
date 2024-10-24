@@ -13,7 +13,4 @@ export const useAppTheme = (isDark: boolean) => {
             document.documentElement.style.setProperty('--foreground-color', '#020308');
         }
     }, [isDark]);
-
-    WebApp.enableClosingConfirmation();
-    WebApp.expand();
 };

@@ -10,7 +10,7 @@ export const Header = () => {
             <div className={styles.right}>
                 <div className={styles.params}>
                     <div className={styles.shareContainer}>
-                        <Icon name="profile" className={styles.icon} />
+                        <Icon name="profile2" className={styles.icon} />
                         <span>25%</span>
                     </div>
                     <div className={styles.pointsContainer}>

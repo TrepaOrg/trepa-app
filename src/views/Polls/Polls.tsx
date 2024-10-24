@@ -10,7 +10,7 @@ export const Polls = () => {
     }, []);
 
     async function getPolls() {
-        const { data } = await supabase.from('Poll').select('*');
+        const { data } = await supabase.from('Polls').select('*');
 
         if (data) {
             setPolls(data);

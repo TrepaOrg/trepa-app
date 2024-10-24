@@ -3,7 +3,7 @@ export type Json = string | number | boolean | null | { [key: string]: Json | un
 export type Database = {
     public: {
         Tables: {
-            Poll: {
+            Polls: {
                 Row: {
                     created_at: string;
                     expired_at: string;
@@ -33,7 +33,7 @@ export type Database = {
                 };
                 Relationships: [];
             };
-            User: {
+            Users: {
                 Row: {
                     created_at: string;
                     id: number;
@@ -54,7 +54,7 @@ export type Database = {
                 };
                 Relationships: [];
             };
-            Vote: {
+            Votes: {
                 Row: {
                     id: string;
                     poll_id: string;
@@ -81,17 +81,44 @@ export type Database = {
                         foreignKeyName: 'Vote_poll_id_fkey';
                         columns: ['poll_id'];
                         isOneToOne: false;
-                        referencedRelation: 'Poll';
+                        referencedRelation: 'Polls';
                         referencedColumns: ['id'];
                     },
                     {
                         foreignKeyName: 'Vote_user_id_fkey';
                         columns: ['user_id'];
                         isOneToOne: false;
-                        referencedRelation: 'User';
+                        referencedRelation: 'Users';
                         referencedColumns: ['id'];
                     },
                 ];
+            };
+            WaitList: {
+                Row: {
+                    created_at: string;
+                    first_name: string | null;
+                    is_premium: boolean;
+                    language_code: string | null;
+                    telegram_id: number;
+                    username: string;
+                };
+                Insert: {
+                    created_at?: string;
+                    first_name?: string | null;
+                    is_premium: boolean;
+                    language_code?: string | null;
+                    telegram_id?: number;
+                    username: string;
+                };
+                Update: {
+                    created_at?: string;
+                    first_name?: string | null;
+                    is_premium?: boolean;
+                    language_code?: string | null;
+                    telegram_id?: number;
+                    username?: string;
+                };
+                Relationships: [];
             };
         };
         Views: {
@@ -109,7 +136,8 @@ export type Database = {
     };
 };
 
-export type Poll = Database['public']['Tables']['Poll']['Row'];
+export type Poll = Database['public']['Tables']['Polls']['Row'];
+
 type PublicSchema = Database[Extract<keyof Database, 'public'>];
 
 export type Tables<

@@ -6,6 +6,7 @@ import HomeIcon from '@assets/icons/home.svg?react';
 import PollsIcon from '@assets/icons/polls.svg?react';
 import PortfolioIcon from '@assets/icons/portfolio.svg?react';
 import ProfileIcon from '@assets/icons/profile.svg?react';
+import Profile2Icon from '@assets/icons/profile2.svg?react';
 import PulseIcon from '@assets/icons/pulse.svg?react';
 import PointsIcon from '@assets/icons/points.svg?react';
 import SearchIcon from '@assets/icons/search.svg?react';
@@ -17,6 +18,7 @@ export const icons = {
     polls: PollsIcon,
     portfolio: PortfolioIcon,
     profile: ProfileIcon,
+    profile2: Profile2Icon,
     pulse: PulseIcon,
     points: PointsIcon,
     search: SearchIcon,
